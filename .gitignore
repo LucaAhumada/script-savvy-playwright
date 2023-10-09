@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Reporting and other files
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/allure-results/
+/allure-report/
+/html-report/
+/Downloads/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+reports/
+
+# lighthouse reports
+
+LighthouseReport.html

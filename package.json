@@ -1,0 +1,52 @@
+{
+  "name": "script-savvy",
+  "version": "1.0.0",
+  "description": "A Comprehensive Test Automation Framework Based on Playwright. Intuitive. Efficient. Made simple.",
+  "main": "index.js",
+  "keywords": [
+    "testing",
+    "playwright",
+    "automation",
+    "bdd"
+  ],
+  "author": "Luca Ahumada",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "@types/node": "^20.8.3",
+    "allure-commandline": "^2.24.1",
+    "allure-playwright": "^2.9.2",
+    "k6": "^0.0.0",
+    "lighthouse": "^9.6.8",
+    "open-cli": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@datadog/browser-logs": "^4.50.0",
+    "axios": "^1.5.1",
+    "winston": "^3.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LucaAhumada/script-savvy"
+  },
+  "bugs": {
+    "url": "https://github.com/LucaAhumada/script-savvy/issues"
+  },
+  "homepage": "https://github.com/LucaAhumada/script-savvy",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:chrome": "playwright test --project=chrome",
+    "test:firefox": "playwright test --project=firefox",
+    "test:load": "k6 run ./performance/runner.js",
+    "record": "npx playwright codegen",
+    "report": "allure serve ./reports/allure-results",
+    "trace": "npx playwright show-trace",
+    "audit:desktop": "node ./utils/lighthouse.js desktop && open-cli ./reports/lighthouse/LighthouseReport.html",
+    "audit:mobile": "node ./utils/lighthouse.js mobile && open-cli ./reports/lighthouse/LighthouseReport.html"
+  }
+}
