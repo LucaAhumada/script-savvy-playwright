@@ -1,8 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from '@playwright/test';
 import { BasePage } from './commonActions';
-import { Enviroment } from '../src/core/dataHandler';
-
-let env: Enviroment = new Enviroment(process.env.ENV!);
+import { loadEnvironmentConfig, loadTestDataConfig } from '../config/configLoader';
 
 export class LoginPage extends BasePage {
     readonly LOGIN_START_BUTTON: Locator;
@@ -11,8 +9,12 @@ export class LoginPage extends BasePage {
     readonly LOGIN_FINISH_BUTTON: Locator;
     readonly UNREAD_MESSAGES: Locator;
 
-    constructor(page: Page, context: BrowserContext) {
+    private env: any;
+
+    constructor(page: Page, context: BrowserContext, environment: string) {
         super(page, context);
+        this.env = loadEnvironmentConfig(environment);
+
         this.LOGIN_START_BUTTON = this.page.getByRole('link', { name: ' Iniciar sesión' });
         this.USERNAME_INPUT = this.page.locator('#ajax_loginuser');
         this.PASSWORD_INPUT = this.page.locator('#ajax_loginpass');
@@ -21,7 +23,7 @@ export class LoginPage extends BasePage {
     }
 
     async navigateToLoginPage(): Promise<void> {
-        await this.goto(env.baseURL);
+        await this.goto(this.env.baseURL);
     }
 
     async startLoginProcess(): Promise<void> {
@@ -29,8 +31,8 @@ export class LoginPage extends BasePage {
     }
 
     async fillCredentials(): Promise<void> {
-        await this.fill(this.USERNAME_INPUT, env.username);
-        await this.fill(this.PASSWORD_INPUT, env.password);
+        await this.fill(this.USERNAME_INPUT, this.env.username);
+        await this.fill(this.PASSWORD_INPUT, this.env.password);
     }
 
     async endLoginProcess(): Promise<void> {

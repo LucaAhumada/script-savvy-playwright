@@ -1,4 +1,4 @@
-import test from '../src/core/testHandler';
+import test from '../config/testManager';
 
 // We can use steps like this to reproduce Cucumber formatting
 

@@ -1,8 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from "@playwright/test";
 import { BasePage } from "./commonActions";
-import { Enviroment } from "../src/core/dataHandler";
-
-let env: Enviroment = new Enviroment(process.env.ENV!);
+import { loadEnvironmentConfig } from '../config/configLoader';
 
 export class ProfilePage extends BasePage {
   readonly PROFILE_DROPDOWN_MENU: Locator;
@@ -18,32 +16,29 @@ export class ProfilePage extends BasePage {
   readonly SAVE_BUTTON: Locator;
   readonly SUCCESS_MESSAGE: Locator;
 
-  constructor(page: Page, context: BrowserContext) {
+  private env: any;
+
+  constructor(page: Page, context: BrowserContext, environment: string) {
     super(page, context);
+
+    this.env = loadEnvironmentConfig(environment);
+
     this.PROFILE_DROPDOWN_MENU = this.page.getByRole("link", { name: "▼" });
-    this.PROFILE_DETAILS_BUTTON = this.page.getByRole("link", {
-      name: "Detalles del Perfil",
-    });
+    this.PROFILE_DETAILS_BUTTON = this.page.getByRole("link", { name: "Detalles del Perfil" });
     this.PERSONAL_TEXT = this.page.getByLabel("Texto Personal");
     this.BIRTHDATE_YEAR = this.page.locator('input[name="bday3"]');
     this.BIRTHDATE_MONTH = this.page.locator('input[name="bday1"]');
     this.BIRTHDATE_DAY = this.page.locator('input[name="bday2"]');
     this.SIGNATURE = this.page.locator("#signature");
     this.LOCATION = this.page.locator('[id="customfield\\[cust_loca\\]"]');
-    this.AVATAR_URL_MENU = this.page.getByText(
-      "Especificar avatar mediante URL"
-    );
+    this.AVATAR_URL_MENU = this.page.getByText("Especificar avatar mediante URL");
     this.AVATAR_URL_INPUT = this.page.locator('input[name="userpicpersonal"]');
-    this.SAVE_BUTTON = this.page.getByRole("button", {
-      name: "Cambiar perfil",
-    });
-    this.SUCCESS_MESSAGE = this.page.getByText(
-      "Se ha actualizado correctamente tu perfil"
-    );
+    this.SAVE_BUTTON = this.page.getByRole("button", { name: "Cambiar perfil" });
+    this.SUCCESS_MESSAGE = this.page.getByText("Se ha actualizado correctamente tu perfil");
   }
 
   async navigateToURL(): Promise<void> {
-    await this.goto(env.baseURL);
+    await this.goto(this.env.baseURL);
   }
 
   async clickProfileDropdownMenu(): Promise<void> {
@@ -85,10 +80,7 @@ export class ProfilePage extends BasePage {
   }
 
   async verifySuccessMessage(): Promise<void> {
-    await expect(
-      this.SUCCESS_MESSAGE,
-      "Should have profile updated successfully"
-    ).toBeVisible();
+    await expect(this.SUCCESS_MESSAGE, "Should have profile updated successfully").toBeVisible();
   }
 
   async cleanProfile(): Promise<void> {

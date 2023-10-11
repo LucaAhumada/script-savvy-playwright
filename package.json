@@ -39,14 +39,14 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "test": "playwright test",
-    "test:ui": "playwright test --ui",
-    "test:chrome": "playwright test --project=chrome",
-    "test:firefox": "playwright test --project=firefox",
+    "test": "playwright test --headed",
+    "test:monitor": "playwright test --ui",
+    "test:chrome": "playwright test --project=chrome --headed",
+    "test:firefox": "playwright test --project=firefox --headed",
+    "test:record": "playwright codegen",
+    "test:trace": "playwright show-trace",
+    "test:report": "allure serve ./reports/allure-results",
     "test:load": "k6 run ./performance/runner.js",
-    "record": "npx playwright codegen",
-    "report": "allure serve ./reports/allure-results",
-    "trace": "npx playwright show-trace",
     "audit:desktop": "node ./utils/lighthouse.js desktop && open-cli ./reports/lighthouse/LighthouseReport.html",
     "audit:mobile": "node ./utils/lighthouse.js mobile && open-cli ./reports/lighthouse/LighthouseReport.html"
   }

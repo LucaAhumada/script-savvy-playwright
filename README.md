@@ -14,34 +14,43 @@
 
 ## Structure
 
+```
+├── config
+│   ├── data
+│   │   ├── data.json
+│   ├── environment
+│   │   ├── configLoader.ts
+│   │   ├── testManager.ts
 ├── logs
 ├── pageObjects
-│ ├── LoginPage.ts
-│ └── ProfilePage.ts
+│   ├── LoginPage.ts
+│   └── ProfilePage.ts
 ├── performance
-│ ├── runner.js
-│ └── test-scenario.js
+│   ├── runner.js
+│   └── test-scenario.js
 ├── reports
-│ ├── allure-reports
-│ ├── artifacts
-│ ├── html-reports
-│ ├── lighthouse
+│   ├── allure-reports
+│   ├── artifacts
+│   ├── html-reports
+│   ├── lighthouse
 ├── src
-│ ├── api
-│ │ └── client.ts
-│ ├── core
-│ │ ├── dataHandler.ts
-│ │ ├── logger.ts
-│ │ └── testHandler.ts
-│ ├── http
-│ │ ├── httpClient.ts
-│ │ └── axiosHttpClient.ts
-│ └── authConfig.ts
+│   ├── api
+│   │   └── client.ts
+│   ├── core
+│   │   ├── dataHandler.ts
+│   │   ├── logger.ts
+│   │   └── testHandler.ts
+│   ├── http
+│   │   ├── httpClient.ts
+│   │   └── axiosHttpClient.ts
+│   └── authConfig.ts
 ├── tests
-│ ├── login.test.ts
-│ ├── profile.test.ts
-│ └── api
-│ └── example.test.ts
+│   ├── login.test.ts
+│   ├── profile.test.ts
+│   └── api
+│   └── example.test.ts
 ├── utils
-│ ├── lighthouse.js
-│ └── testConfig.ts
+│   ├── lighthouse.js
+│   └── testConfig.ts
+
+```

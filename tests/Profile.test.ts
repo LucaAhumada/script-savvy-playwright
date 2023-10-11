@@ -1,4 +1,4 @@
-import test from "../src/core/testHandler";
+import test from '../config/testManager';
 
 test.beforeEach(async ({ loginPage, profilePage }) => {
   await test.step(`Navigate to the forum and login with valid credentials`, async () => {
