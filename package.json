@@ -25,6 +25,7 @@
     "@datadog/browser-logs": "^4.50.0",
     "axios": "^1.5.1",
     "dotenv": "^16.3.1",
+    "fs-extra": "^11.1.1",
     "winston": "^3.11.0"
   },
   "repository": {
@@ -45,7 +46,7 @@
     "test:firefox": "playwright test --project=firefox --headed",
     "test:record": "playwright codegen",
     "test:trace": "playwright show-trace",
-    "test:report": "allure serve ./reports/allure-results",
+    "test:report": "robocopy .\\allure-report\\history .\\allure-results\\history /MIR && allure generate --clean ./allure-results && allure open",
     "test:load": "k6 run ./performance/runner.js",
     "audit:desktop": "node ./utils/lighthouse.js desktop && open-cli ./reports/lighthouse/LighthouseReport.html",
     "audit:mobile": "node ./utils/lighthouse.js mobile && open-cli ./reports/lighthouse/LighthouseReport.html"

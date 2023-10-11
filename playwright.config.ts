@@ -7,8 +7,6 @@ export default defineConfig({
 
   outputDir: './reports/artifacts',
 
-  globalSetup: './global-setup',
-
   // Wheter to run spec files sequentially
   fullyParallel: false,
 
@@ -24,10 +22,12 @@ export default defineConfig({
   // Maximum time expect() should wait to met a condition
   expect: { timeout: 6 * 1000 },
 
+  globalTeardown: "./global-teardown.ts",
+
   // Reporter to use. See https://playwright.dev/docs/test-reporters 
   reporter: [
     ['list'],
-    ["allure-playwright", { detail: true, outputFolder: './reports/allure-results', resultDir: './reports/allure-results' }],
+    ["allure-playwright", { detail: true }],
     ['html', { outputFolder: './reports/html-reports', open: 'never' }]
     // To generate Azure Pipeline Results use the following reporter
     // ['junit', { outputFile: 'test-results/junit.xml' }],
@@ -76,7 +76,7 @@ export default defineConfig({
       name: 'Mobile Safari',
       use: { ...devices['iPhone 12'] },
     }
-  ]
+  ],
 
   // In case you need to run your local env before the tests run
   // webServer: {
