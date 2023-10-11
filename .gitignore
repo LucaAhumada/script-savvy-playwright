@@ -28,3 +28,7 @@ reports/
 # lighthouse reports
 
 LighthouseReport.html
+
+# npmjs
+
+.npmrc
