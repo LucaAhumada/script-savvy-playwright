@@ -1,5 +1,5 @@
 {
-  "name": "@script-savvy/playwright",
+  "name": "@script-savvy/script-savvy-playwright",
   "version": "1.0.1",
   "description": "A Comprehensive Test Automation Framework Based on Playwright. Intuitive. Efficient. Made simple.",
   "main": "index.js",
