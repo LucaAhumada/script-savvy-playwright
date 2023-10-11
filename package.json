@@ -50,5 +50,8 @@
     "test:load": "k6 run ./performance/runner.js",
     "audit:desktop": "node ./utils/lighthouse.js desktop && open-cli ./reports/lighthouse/LighthouseReport.html",
     "audit:mobile": "node ./utils/lighthouse.js mobile && open-cli ./reports/lighthouse/LighthouseReport.html"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
