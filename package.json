@@ -1,6 +1,6 @@
 {
-  "name": "@script-savvy/script-savvy-playwright",
-  "version": "1.0.2",
+  "name": "@script-savvy/playwright",
+  "version": "1.0.0",
   "description": "A Comprehensive Test Automation Framework Based on Playwright. Intuitive. Efficient. Made simple.",
   "main": "index.js",
   "keywords": [
