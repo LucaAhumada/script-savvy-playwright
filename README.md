@@ -11,3 +11,37 @@
   <img src="https://www.vectorlogo.zone/logos/microsoft_edge/microsoft_edge-icon.svg"/>
   <img src="https://www.vectorlogo.zone/logos/apple_safari/apple_safari-icon.svg"/>
 </p>
+
+## Structure
+
+├── logs
+├── pageObjects
+│ ├── LoginPage.ts
+│ └── ProfilePage.ts
+├── performance
+│ ├── runner.js
+│ └── test-scenario.js
+├── reports
+│ ├── allure-reports
+│ ├── artifacts
+│ ├── html-reports
+│ ├── lighthouse
+├── src
+│ ├── api
+│ │ └── client.ts
+│ ├── core
+│ │ ├── dataHandler.ts
+│ │ ├── logger.ts
+│ │ └── testHandler.ts
+│ ├── http
+│ │ ├── httpClient.ts
+│ │ └── axiosHttpClient.ts
+│ └── authConfig.ts
+├── tests
+│ ├── login.test.ts
+│ ├── profile.test.ts
+│ └── api
+│ └── example.test.ts
+├── utils
+│ ├── lighthouse.js
+│ └── testConfig.ts

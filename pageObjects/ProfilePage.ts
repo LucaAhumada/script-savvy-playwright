@@ -1,7 +1,6 @@
 import { Page, BrowserContext, Locator, expect } from "@playwright/test";
 import { BasePage } from "./commonActions";
 import { Enviroment } from "../src/core/dataHandler";
-import logger from "../src/core/logger";
 
 let env: Enviroment = new Enviroment(process.env.ENV!);
 

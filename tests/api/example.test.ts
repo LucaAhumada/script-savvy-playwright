@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { Library } from "../../src/api/Library";
+import { Library } from "../../src/api/client";
 import { AxiosHttpClient } from "../../src/http/AxiosHttpClient";
 
 const httpClient = new AxiosHttpClient("https://library-api.postmanlabs.com");
