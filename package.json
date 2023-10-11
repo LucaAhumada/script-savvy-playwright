@@ -1,5 +1,5 @@
 {
-  "name": "script-savvy",
+  "name": "@script-savvy/playwright",
   "version": "1.0.0",
   "description": "A Comprehensive Test Automation Framework Based on Playwright. Intuitive. Efficient. Made simple.",
   "main": "index.js",
@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LucaAhumada/script-savvy"
+    "url": "https://github.com/LucaAhumada/script-savvy-playwright"
   },
   "bugs": {
-    "url": "https://github.com/LucaAhumada/script-savvy/issues"
+    "url": "https://github.com/LucaAhumada/script-savvy-playwright/issues"
   },
-  "homepage": "https://github.com/LucaAhumada/script-savvy",
+  "homepage": "https://github.com/LucaAhumada/script-savvy-playwright",
   "engines": {
     "node": ">=14.0.0"
   },
