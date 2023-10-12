@@ -1,13 +1,13 @@
-import { test, expect } from "@playwright/test";
-import { Library } from "../../src/api/client";
-import { AxiosHttpClient } from "../../src/http/AxiosHttpClient";
+import { test, expect } from '@playwright/test'
+import { Library } from '../../src/api/client'
+import { AxiosHttpClient } from '../../src/http/AxiosHttpClient'
 
-const httpClient = new AxiosHttpClient("https://library-api.postmanlabs.com");
+const httpClient = new AxiosHttpClient('https://library-api.postmanlabs.com')
 const library = new Library(httpClient, {
-  type: "API Key",
-  keyName: "api-key",
-  value: "postmanrulz",
-});
+    type: 'API Key',
+    keyName: 'api-key',
+    value: 'postmanrulz',
+})
 
 // test('@API Response must return books', async () => {
 //     await test.step('Send GET Request', async () => {
