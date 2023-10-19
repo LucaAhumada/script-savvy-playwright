@@ -20,14 +20,14 @@ This is a **Test Automation Framework** working as a boilerplate to run end-to-e
 
 Top Features:
 
-Cross-language: write your code in JavaScript or TypeScript.
-Cross-browser: support for Chrome, Firefox, Edge or Safari.
-Cross-platform: test on Windows, Linux, macOS, locally or CI.
-Mobile testing: native support for Chrome (Android) and Safari (iOS).
-API testing: test and validate endpoint all in one place.
-Paralelism: stage and run multiple test at the same time.
-Extended: Playwright based with additional tools and features.
-Extras: wondering what else can Script Savvy do? Check out Savvy docs!
+- Cross-language: write your code in JavaScript or TypeScript.
+- Cross-browser: support for Chrome, Firefox, Edge or Safari.
+- Cross-platform: test on Windows, Linux, macOS, locally or CI.
+- Mobile testing: native support for Chrome (Android) and Safari (iOS).
+- API testing: test and validate endpoint all in one place.
+- Paralelism: stage and run multiple test at the same time.
+- Extended: Playwright based with additional tools and features.
+- Extras: wondering what else can Script Savvy do? Check out Savvy docs!
 
 ## Structure
 
