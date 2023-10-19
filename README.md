@@ -1,7 +1,7 @@
 # Script Savvy: end-to-end Automation Framework
 
 <p align="center">
-  <img src="[img]https://i.imgur.com/RiXtg0G.png[/img]"/>
+  <img src="https://i.imgur.com/RiXtg0G.png"/>
 </p>
 <p align="center">
   <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"/>
