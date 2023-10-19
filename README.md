@@ -6,7 +6,6 @@
 <p align="center">
   <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"/>
   <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"/>
-  <img src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-icon.svg"/>
 </p>
 <p align="center">
   <img src="https://www.vectorlogo.zone/logos/google_chrome/google_chrome-icon.svg"/>
